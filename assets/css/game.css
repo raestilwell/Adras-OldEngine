@@ -1,0 +1,82 @@
+h1, h2, h3, h4, h5{
+	font-family: 'Cinzel Decorative', serif;
+}
+
+ul.utility-links{
+	list-style-type: none;
+}
+
+ul.utility-links > li {
+	display: inline-block;
+	margin: .25em .34em;
+}
+
+ul.utility-links > li > a{
+	color: rgba(255,255,255,.79);
+	transition: all ease .2s;
+}
+
+ul.utility-links > li > a:hover{
+	color: rgba(255,255,255,1);
+}
+
+.top-right{
+	position: absolute;
+	z-index: 2000;
+	top: 20;
+	right: 20;
+}
+
+
+#overDiv {
+	position:absolute; 
+	visibility:hidden; 
+	z-index:1000;
+}
+
+/* Add these rules to your game.css file */
+#bmail, #bchat {
+  display: none; /* Hidden by default */
+}
+
+.window-alert {
+  background-color: #9d436b;
+  color: #f4f5f4;
+  border-radius: 4px;
+  text-align: center;
+  position: fixed;
+  top: 25%;
+  right: 0;
+  z-index: 9999; /* Ensure alerts appear on top */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow for better visibility */
+  animation: slide-in 0.3s ease-out; /* Animation when appearing */
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.window-alert a{
+	font-family: 'Quattrocento', serif;
+	text-decoration: none!important;
+	color: #fff!important;
+}
+
+table.window-alert th,td {
+	padding: 1rem!important;
+}
+
+.n-alert{
+	animation: tilt-shaking;
+	animation-duration: .2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

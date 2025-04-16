@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="Favicon Link">
+	
+	<title>Adrastium | Realms Reborn | Register</title>
+	
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	
+	<!-- FontAwesome CDN -->
+	<script src="https://kit.fontawesome.com/c11c3ebcdf.js" crossorigin="anonymous"></script>
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../assets/css/styles.css"/>
+  
+  </head>
+  <body class="d-flex vh-100 text-center">
+	  
+	  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+		<header class="mb-auto">
+		  <div>
+			<h3 class="float-md-start mb-0">Adrastium</h3>
+			<nav class="nav nav-masthead justify-content-center float-md-end">
+			  <a class="nav-link fw-bold py-1 px-0" href="../">Home</a>
+			  <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/character-registration">Register</a>
+			  <a class="nav-link fw-bold py-1 px-0" href="https://adrastium.com/who.php">Who's Online</a>
+			</nav>
+		  </div>
+		</header>
+		
+		<main class="px-3">
+			<h1>New Character</h1>
+			<hr class="w-30">
+			<p class="lead">In Adrastium, players are granted the opportunity to forge <em>three</em> unique characters, one of which can belong to a custom race of their own creation, provided it has been submitted and approved on our <strong><a class="text-white hover-underline-animation" href="https://discord.gg/uheRfvWTxn">Discord server.</a></strong></p>
+			
+			<form method="post" action="register.php">
+				<div class="row mb-2">
+					<div class="col">
+						<label for="username" class="form-label visually-hidden">Character Name</label>
+						<input type="text" name="username" class="form-control" placeholder="Character Name" required>
+						<small class="form-text muted" style="float: left!important;">
+						  Your character name must be 3-15 characters long and may only contain letters.
+						</small>
+					</div>
+				</div>
+				
+				<div class="row mb-3">
+					<div class="col">
+						<label for="pass1" class="form-label visually-hidden">Password</label>
+						<input type="password" name="pass1" class="form-control" placeholder="Password" required>
+					</div>
+					<div class="col">
+						<label for="pass2" class="form-label visually-hidden">Password Confirmation</label>
+						<input type="password" name="pass2" class="form-control" placeholder="Password Confirmation" required>
+					</div>
+				</div>
+				
+				<div class="row mb-3">
+					<div class="col">
+					<label for="race" class="visually-hidden">Lineage</label>
+					<select name="race" class="form-control" required>
+					  <option disabled selected>Select your lineage</option>
+					  <option value="1">Custom Race</option>
+					  <option value="2">Dwarf</option>
+					  <option value="3">Elf Variant: High Elf</option>
+					  <option value="4">Elf Variant: Wood Elf</option>
+					  <option value="5">Elf Variant: Drow</option>
+					  <option value="6">Gnome</option>
+					  <option value="7">Half-Elf Variant: Half High Elf</option>
+					  <option value="8">Half-Elf Variant: Half High Elf</option>
+					  <option value="9">Half-Elf Variant: Half High Elf</option>
+					  <option value="10">Halfling</option>
+					  <option value="11">Human</option>
+					  <option value="12">Lycan</option>
+					  <option value="13">Vampire</option>
+					</select>
+					</div>
+				</div>
+				
+				<div class="row mb-3">
+					<div class="col">
+					<label for="iclass" class="visually-hidden">Class</label>
+					<select name="iclass" class="form-control" required>
+					  <option disabled selected>Select your class</option>
+					  <option value="1">Artificer</option>
+					  <option value="2">Artisan</option>
+					  <option value="3">Barbarian</option>
+					  <option value="4">Bard</option>
+					  <option value="5">Cleric</option>
+					  <option value="6">Druid</option>
+					  <option value="7">Fighter</option>
+					  <option value="8">Mage</option>
+					  <option value="9">Paladin</option>
+					  <option value="10">Ranger</option>
+					  <option value="11">Rogue</option>
+					</select>
+					</div>
+				</div>
+				
+				<div class="row mb-3">
+					<div class="col">
+					<label for="gender" class="visually-hidden">Gender</label>
+					<select name="gender" class="form-control" required>
+					  <option disabled selected>Select your gender</option>
+					  <option value="1">Female</option>
+					  <option value="2">Male</option>
+					  <option value="3">Non-Binary/Other</option>
+					</select>
+					</div>
+				</div>
+				
+				<!-- Legacy Character Option -->
+				<div class="row mb-3">
+					<div class="col">
+						<div class="form-check text-start">
+							<input class="form-check-input" type="checkbox" id="is_legacy" name="is_legacy" value="1" onchange="toggleDisclosures()">
+							<label class="form-check-label" for="is_legacy">
+								I am porting a legacy character from another setting
+							</label>
+						</div>
+					</div>
+				</div>
+				
+				<!-- New Character Disclosure (shown by default) -->
+				<div id="new_character_disclosure" class="row mb-3">
+					<div class="col">
+						<div class="card bg-dark text-white border-light">
+							<div class="card-header">
+								<h5 class="mb-0">Character Progression Notice</h5>
+							</div>
+							<div class="card-body text-start">
+								<p>For fair and balanced roleplay, all characters in Adrastium begin with baseline class abilities and progress through consistent, positive roleplay contributions. This honor system ensures everyone has an enjoyable experience while their character grows naturally in the world.</p>
+								<p>Through your journey in Adrastium, your character will develop skills, abilities, and connections that reflect your roleplay choices and community contributions.</p>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" id="new_character_agreement" name="new_character_agreement" value="1" required>
+									<label class="form-check-label" for="new_character_agreement">
+										I understand and agree to follow the honor system for fair roleplay
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Legacy Character Fields (Hidden by Default) -->
+				<div id="legacy_fields" style="display: none;">
+					<div class="row mb-3">
+						<div class="col">
+							<label for="legacy_setting" class="form-label">Original Setting</label>
+							<input type="text" class="form-control" id="legacy_setting" name="legacy_setting" placeholder="e.g., Forgotten Realms, Dragonlance, etc.">
+						</div>
+					</div>
+					
+					<div class="row mb-3">
+						<div class="col">
+							<label for="legacy_history" class="form-label">Character History & Notable Abilities</label>
+							<textarea class="form-control" id="legacy_history" name="legacy_history" rows="5" placeholder="Please provide a brief overview of your character's history and significant abilities"></textarea>
+						</div>
+					</div>
+					
+					<div class="row mb-3">
+						<div class="col">
+							<div class="card bg-dark text-white border-light">
+								<div class="card-header">
+									<h5 class="mb-0"><i class="fa-solid fa-crown"></i> Legacy Character Progression System <i class="fa-solid fa-crown"></i></h5>
+								</div>
+								<div class="card-body text-start">
+									<p>Due to the aetherial anomalies in Adrastium, your legacy character will initially revert to their basic class abilities. We operate on an honor system for fair roleplay among all players.</p>
+									
+									<h6 class="mt-3">Character Progression Tiers:</h6>
+									<ul class="text-start">
+										<li><strong>Tier 1 (Minimum 30 days):</strong> Basic class abilities only</li>
+										<li><strong>Tier 2:</strong> Limited special abilities unlocked after demonstrating good roleplay</li>
+										<li><strong>Tier 3 (Minimum 3+ months):</strong> More significant abilities unlocked after consistent, positive contribution to the community</li>
+									</ul>
+									
+									<p>An administrator will reach out to discuss your character's journey within Adrastium's setting.</p>
+									
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="legacy_agreement" name="legacy_agreement" value="1">
+										<label class="form-check-label" for="legacy_agreement">
+											I understand and agree to these progression terms
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<button type="submit" class="btn btn-lg btn-pink fw-bold w-50">Register</button>
+				
+			</form>
+			
+		  </main>
+		
+		  <footer class="mt-auto text-white-50">
+			<p>Copyright &copy;2024 <a href="https://raemakes.com" target="_blank" class="text-white">RaeMakes</a>. All Rights Reserved.</p>
+		  </footer>
+		</div>
+  
+	<!-- JavaScript for toggling disclosures -->
+	<script>
+	function toggleDisclosures() {
+		const isLegacy = document.getElementById('is_legacy').checked;
+		const legacyFields = document.getElementById('legacy_fields');
+		const newCharDisclosure = document.getElementById('new_character_disclosure');
+		const legacyAgreement = document.getElementById('legacy_agreement');
+		const newCharAgreement = document.getElementById('new_character_agreement');
+		
+		if (isLegacy) {
+			// Show legacy fields, hide new character disclosure
+			legacyFields.style.display = 'block';
+			newCharDisclosure.style.display = 'none';
+			
+			// Update requirement attributes
+			legacyAgreement.setAttribute('required', 'required');
+			newCharAgreement.removeAttribute('required');
+			
+			document.getElementById('legacy_setting').setAttribute('required', 'required');
+			document.getElementById('legacy_history').setAttribute('required', 'required');
+		} else {
+			// Hide legacy fields, show new character disclosure
+			legacyFields.style.display = 'none';
+			newCharDisclosure.style.display = 'block';
+			
+			// Update requirement attributes
+			legacyAgreement.removeAttribute('required');
+			newCharAgreement.setAttribute('required', 'required');
+			
+			document.getElementById('legacy_setting').removeAttribute('required');
+			document.getElementById('legacy_history').removeAttribute('required');
+		}
+	}
+	
+	// Initialize on page load
+	document.addEventListener('DOMContentLoaded', function() {
+		toggleDisclosures();
+	});
+	</script>
+	
+	<!-- Bootstrap Javascript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="Favicon Link">
+	
+	<title>Adrastium | Realms Reborn</title>
+	
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	
+	<!-- FontAwesome CDN -->
+	<script src="https://kit.fontawesome.com/c11c3ebcdf.js" crossorigin="anonymous"></script>
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../assets/css/styles.css"/>
+  
+  </head>
+  <body class="d-flex vh-100">
+
+<div class="container">
+	<div class="row">
+		<div class="col-8 mx-auto p-3">
+		<h1 class="text-center">Adrastium Commands List</h1>
+			
+		<div id="interface"><h3 class="text-center">Interface Commands</h3></div>
+		<hr>
+		</br>
+		<dl>
+		<dt>-/+ooc</dt>
+			<dd>Turns on and off ooc announcement channel.</dd><br>
+		<dt>-/+map</dt>
+			<dd>Hides the floating directional map visible onscreen</dd><br>
+		<dt>-/+friend player</dt>
+			<dd>Adds the indicated player to your friends list</dd><br>
+		<dt>-/+ignore player</dt>
+			<dd>Adds the indicated player to your ignore list</dd><br>
+		<dt>look <em>direction</em></dt>
+			<dd>Allows the player to look in the specified direction (north, west, east, south) to see which players can be found on the tiles in that direction.</dd><br>
+		<dt>settings</dt>
+			<dd>Allows the player to customize their interface settings. Player must log in again for changes to take effect.</dd><br>
+		<dt>help</dt>
+			<dd>Pulls up the In-Game Help screen in a new tab</dd><br>
+		<dt>quit</dt>
+			<dd>Logs the player out of the game.</dd><br>
+			</dl>
+		</br>
+		
+		<div id="movement"><h3 class="text-center">Movement</h3></div>
+		<hr>
+		</br>
+		<dt>n/north</dt>
+			<dd>move North</dd><br>
+		<dt>s/south</dt>
+			<dd>move South</dd><br>
+		<dt>e/east</dt>
+			<dd>move East</dd><br>
+		<dt>w/west</dt>
+			<dd>move West</dd><br>
+		<dt>u/up</dt>
+			<dd>move up</dd><br>
+		<dt>d/down</dt>
+			<dd>move down</dd><br>
+		</dl>
+		</br>
+		<h4 class="text-center">Advanced Movement</h4>
+		<dt>sethome</dt>
+		<dd>Sets the recall of the player to whatever room it is posted in. This can be reset to another location at any time.</dd><br>
+		<dt>recall</dt>
+			<dd>Your character is instantly teleported back to the location they have set as their home.</dd><br>
+		<dt>follow <em>character</em></dt>
+			<dd>Your character shadows the movement of the selected character, appearing on whatever tile they 
+			click onto until the 'follow' command is typed.</dd><br>
+			</dl>
+		</br>
+		
+		<div id="communication"><h3 class="text-center">Communication</h3></div>
+		<hr>
+		</br>
+		<dl>
+		<dt>say</dt>
+			<dd>Public speech directed to everyone in the room you are currently in; ex. <em>say 
+			Hello.</em> appears as <em>You said, "Hello."</em> or <em>John said, "Hello."</em> to other players.<br> 
+			Additionally, you can use the dropdown to the right of the submit bar to change the language your character is speaking in. This applies to <strong>say</strong>, <strong>say to</strong>, <strong>shout</strong>, and <strong>whisper to</strong> commands. Only other characters who also understand the language will be able to see what was said. ex. with Elvish selected <em>say to Sela Hello.</em> Appears as <em>You said in Elvish, "Hello."</em>, <em>John said something in Elvish.</em>, or <em>John said in Elvish, "Hello."</em></dd><br>
+		<dt>say to <em>character</em></dt>
+			<dd>Public speech directed toward one person in the room you are currently
+			occupying; ex. <em>say to Sela Hello.</em> Appears as <em>You said to Sela, "Hello."</em> or <em>John said to Sela, "Hello."</em></dd><br>
+		<dt>shout</dt>
+			<dd>Public speech that will reach everyone in Adrastium 
+			(Crazy, right?); ex. <em>shout Hello!</em> Appears as <em>You shouted, "Hello!"</em> or <em>John shouted, "Hello!"</em> to other players.</dd><br>
+		<dt>tell to <em>character</em></dt>
+			<dd>Sends a private message to the indicated character anywhere in game. Can be implemented for 
+			private ooc tells, as well as ic communication.</dd><br>
+		<dt>whisper to <em>character</em></dt>
+			<dd>Sends a private message to the indicated character that is presently in the same room. </dd><br>
+		<dt>ooc</dt>
+			<dd>Public, ooc message made to everyone logged into Adrastium.</dd><br>
+		<dt>/</dt>
+			<dd>Displays the action that your character performed and is visible to all in your room; ex. /waved. 
+			Appears as John waved. A space will have to be added after the / character.</dd><br>
+			<dt>read</dt>
+				<dd>Reads a list, board, sign, note or etc, that is available in the room; ex. <em>read list</em></dd><br>
+			<dt>post</dt>
+				<dd>Places a message on a public board</dd><br>
+		</dl>
+		</br>
+		
+		<div id="group" class="text-center"><h3>Guild/Clan/Militia Commands</h3></div>
+		<hr>
+		</br>
+		<h4>Guild Commands</h4>
+		<dl>
+		<dt>+/-guild <em>character</em></dt>
+		<dd><b>Guild Leader only</b>, adds or kicks the selected player from the guild.</dd><br>
+		<dt>guild</dt>
+		<dd>Allows guild members to chat on a private channel.</dd><br>
+		</dl>
+		
+		<h4>Clan Commands</h4>
+		<dl>
+		<dt>+/-clan <em>character</em></dt>
+		<dd><b>Clan Leader only</b>, adds or kicks the selected player from the clan.</dd><br>
+		<dt>clan</dt>
+		<dd>Allows clan members to chat on a private channel.</dd><br>
+		</dl>
+		
+		<h4>Militia Commands</h4>
+		<dl>
+		<dt>+/-militia <em>character</em></dt>
+		<dd><b>Militia Leader only</b>, adds or kicks the selected player from the militia.</dd><br>
+		<dt>militia</dt>
+		<dd>Allows militia members to chat on a private channel.</dd><br>
+		</dl>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

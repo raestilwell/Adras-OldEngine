@@ -1,0 +1,124 @@
+<pre>
+<h3>Admin Commands (X-Level)</h3>
+
+<u>Basic Commands</u>
+
+teleport - Teleport. (teleport 0~0~0; teleport 0~0~0 fire, teleport to Player)
+hide - Become invisible. (hide; hide poofs. [works like the <I>me</I> command])
+appear- Become visible. (appear; appear unpoofs. [works like the <i>me</I> command])
+tochat &lt;PLAYER&gt; [&lt;STRING&gt;] -Add the string &lt;STRING&gt; to the user &lt;USER&gt; (tochat Sela Someone whispers, "Smells fishy in here.")
+ashout &lt;MESSAGE&gt; - Send an announcement to every character on Adrasteia. (ashout This is an announcement.)
+achat &lt;MESSAGE&gt; - Use admin-chat channel. (achat Hello, admin people.)
+nowho - Take yourself off of the Who list. 
+showwho - Put yourself back on the Who list.
+mapdis # - Change your minimap radius; default number is 2. (mapdis 3) 
+log - Display the file log
+biglog - Displays the file biglog
+giantlog &lt;NAME&gt; - Displays the file biglog - &lt;NAME&gt; is optional and displays entries in the log matching &lt;NAME&gt;
+memo; editmemo - Use memo.
+rpinfo - Edit the file rpinfo 
+loginmessage - edit the file loginmessage
+promote &lt;USER&gt; # - Promote user &lt;USER&gt; to be a level # Admin
+
+<u>Player Commands</u>
+
+unflag &lt;USER&gt; - Remove the new player flag from &lt;USER&gt;
+find &lt;USER&gt; - Displays the location of user &lt;USER&gt;
+checkip &lt;IP&gt; - Displays the characters who have logged in from IP Address &lt;IP&gt;
+checkchar &lt;USER&gt; - Displays the IP Addresses that user &lt;USER&gt; has logged in from
+crosscheck &lt;USER&gt; - Performs some sort of cross-checking on &lt;USER&gt;
+pose &lt;USER&gt; &lt;ACTION&gt; - Pose as user &lt;USER&gt; and perform action &lt;ACTION&gt;
+seebirth &lt;USER&gt; - Display the date character &lt;USER&gt; was created
+seelogin &lt;USER&gt; - Display when user &lt;USER&gt; last logged in
+watch &lt;USER&gt; - Watch user &lt;USER&gt;'s chat
+warp &lt;USER&gt; &lt;LOCATION&gt; - Move user &lt;USER&gt; to &lt;LOCATION&gt;
+warp &lt;USER&gt; to &lt;CHARACTER&gt; - Moves user &lt;USER&gt; to the location of &lt;CHARACTER&gt;
+summon &lt;USER&gt; - Summons user &lt;USER&gt; to your location
+check &lt;USER&gt; - Check admin level of user &lt;USER&gt;
+del &lt;USERNOS&gt; - Deletes users based on user number
+deletechar &lt;USER&gt; - Deletes user &lt;USER&gt;
+
+<u>Customization Commands</u>
+
+title &lt;PLAYER&gt; &lt;CASTE&gt; - Sets a player's caste.
+rename &lt;PLAYER&gt; - Rename players. (rename Player [u]Player[/u] the Dude)
+newclass &lt;PLAYER&gt; &lt;CLASS&gt; - Change players' classes. (newclass Player warrior)
+neweyes &lt;PLAYER&gt; &lt;EYES&gt; - Edit players' eye color. (neweyes Player blue)
+newhair &lt;PLAYER&gt; &lt;HAIR&gt; - Edit players' hair color. (newhair Player brown)
+newskin &lt;PLAYER&gt; &lt;SKIN&gt; - Edit players' skin color. (newskin Player light)
+newheight &lt;PLAYER&gt; &lt;HEIGHT&gt; - Edit players' height. (newheight Player tall)
+newbuild &lt;PLAYER&gt; &lt;BUILD&gt; - Edit players' build. (newbuild Player athletic)
+setweapon &lt;PLAYER&gt; &lt;WEAPON&gt; - Set a player's weapon. (setweapon Player a plunger)
+setplayer &lt;PLAYER&gt; deity &lt;DEITY&gt; - Set a player's deity. (setplayer Player Sela)
+wed &lt;PLAYER 1&gt; &lt;PLAYER 2&gt; - Marry characters. 
+unwed &lt;PLAYER 1&gt; &lt;PLAYER 2&gt; - Unmarry characters.
+addfame &lt;USER&gt; &lt;VALUE&gt; - Add &lt;VALUE&gt; fame to user &lt;USER&gt;
+giveroom &lt;PLAYER&gt; Give a player the ability to edit a room; The player does not need to be present in the room, but admin does.
+givekey &lt;PLAYER&gt; # - Give players keys. (givekey Player 0)
+
+<u>Punishment Commands</u>
+
+rapsheet - Display the rapsheet and a form for adding a new rap
+mute &lt;USER&gt; [&lt;TIME&gt;] - Mute user &lt;USER&gt; for &lt;TIME&gt; minutes - &lt;TIME&gt; is optional; &lt;USER&gt; can see chat, but cannot add to it.
+unmute &lt;USER&gt; - Unmute user &lt;USER&gt;
+freeze &lt;USER&gt; - Freezes user &lt;USER&gt;; &lt;USER&gt; cannot move levels or add to chat, but chat is visible.
+unfreeze &lt;USER&gt; - Unfreezes user &lt;USER&gt;
+deafen &lt;USER&gt; [&lt;TIME&gt;] - Deafen user &lt;USER&gt; for &lt;TIME&gt; minutes - &lt;TIME&gt; is optional; &lt;USER&gt; cannot see or add to chats.
+undeafen &lt;USER&gt; - Undeafen user &lt;USER&gt;
+glitch &lt;USER&gt; - Glitches user &lt;USER&gt;
+unglitch &lt;USER&gt; - Unglitches user &lt;USER&gt;
+turnoff ooc - mutes the ooc channel.
+turnon ooc - unmutes the ooc channel.
+turnoff chat - mutes the chat channel.
+turnon chat - unmutes the chat channel.
+ban &lt;IP&gt; - Ban users from IP Address &lt;IP&gt;
+unban &lt;IP&gt; - Unban users from IP Address &lt;IP&gt;
+
+<u>Level Commands</u>
+
+editlevel; editlevel 0~0~0; editlevel 0~0~0 fire - edits levels
+seeplane &lt;NAME&gt; - Displays all the levels in plane &lt;NAME&gt;, allows for quick editing of the rooms.
+editnpcs - Edits a level's npcs
+seelocks- View all locks.
+editlock # &lt;COORDINATES&gt; [&lt;COORDINATES&gt;] - Edits a level's locks. (editlock 0 0~0~0 0~1~0)
+makelock &lt;DIRECTION&gt; - Creates a lock from one level to another.
+editbot &lt;NAME&gt; - Edits bots. &lt;i&gt;Tutorial Coming Soon&lt;/i&gt;
+script - Display whether scripts are on or off for current location
+script on - Turn scripts on for current location
+script off - Turn scripts off for current location
+editscript - Display form to edit script for current location <A HREF=escript.htm>Tutorial</A>
+genmap - Display a coloured map showing which locations are above, below and at ground level
+
+<u>Organization Commands</u>
+
+newguild &lt;USER&gt; &lt;GUILDNAME&gt; - Create a new Guild called &lt;GUILDNAME&gt; and make &lt;USER&gt; the owner of the guild
+newmilitia &lt;USER&gt; &lt;MILITIANAME&gt; - Create a new Militia called &lt;MILITIANAME&gt; and make &lt;USER&gt; the owner of the militia
+newclan &lt;USER&gt; &lt;CLANNAME&gt; - Create a new Clan called &lt;CLANNAME&gt; and make &lt;USER&gt; the owner of the clan
+seeorg &lt;ORG&gt; - Display members of organisation &lt;ORG&gt;, with their rank
+seeguilds - List all guilds
+seeclans - List all clans
+seemilitias - List all militias
+
+<u>Flag Commands</u>
+
++pflag &lt;USER&gt; &lt;FLAG&gt; - Add the flag &lt;FLAG&gt; to user &lt;USER&gt;
+-pflag &lt;USER&gt; &lt;FLAG&gt; - Remove the flag &lt;FLAG&gt; from user &lt;USER&gt;
++lflag &lt;FLAG&gt; - Add the flag &lt;FLAG&gt; to current location
+-lflag &lt;FLAG&gt; - Remove the flag &lt;FLAG&gt; from current location
+lflags - Display flags for current location
+pflags &lt;USER&gt; - Display flags for user &lt;USER&gt;
+<a href="/flags.html" target=_"blank">Current Player Flags</a>
+
+<h3>Moderator Commands (T-level)</h3>
+
+summon &lt;USER&gt; - Summons user &lt;USER&gt; to your location
+teleport - Teleport. (teleport 0~0~0; teleport 0~0~0 fire, teleport to Player)
+hide - Become invisible. (hide; hide poofs. [works like the <I>me</I> command])
+appear- Become visible. (appear; appear unpoofs. [works like the <I>me</I> command])
+ashout &lt;MESSAGE&gt; - Send an announcement to every character on Adrasteia. (ashout This is an announcement.)
+achat &lt;MESSAGE&gt; - Use admin-chat channel. (achat Hello, admin people.)
+memo - view memo.
+mapdis # - Change your minimap radius; default number is 2. (mapdis 3) 
+</br>
+</br>
+</pre>

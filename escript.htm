@@ -1,0 +1,323 @@
+<HTML>
+<HEAD>
+<link rel="shortcut icon" href="http://www.iconj.com/ico/x/g/xgjztr58c1.ico" type="image/x-icon" />
+<LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
+<TITLE>E-Script Tutorial</TITLE>
+</HEAD>
+<BODY>
+<H1 ALIGN=center>E-Script! Yay!</H1>
+<H2>Intro</H2><BR>
+Via the wonderful <I>editscript</I> command, level admins can now add all kinds of cool functions to levels. However, in order to do this, the admins in questions must learn the wonderfully evil scripting language known as "E-Script". That's right, Sercc has created a scripting language just for <I>you</I>! Isn't he great?! Oh, and I would suggest heading to 100~100~100 if you're wanting to test stuff out. It's nice and safe.<BR>
+<BR>
+<H2>Basics</H2><BR>
+For the scripts to even work in the first place, you have to tell the level that you want it to check for them. And how do you do that? Well, luckily for you, I made a few commands:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=red>script on</FONT> -- <FONT COLOR=blue>turns on scripts</FONT><BR>
+<FONT COLOR=red>script off</FONT> -- <FONT COLOR=blue>turns off scripts</FONT><BR>
+<FONT COLOR=red>script</FONT> -- <FONT COLOR=blue>tells you whether scripts are on or off</FONT><BR>
+---<BR>
+</CODE><BR>
+And that's it. If scripts are off, they won't do anything. If they're on, (hopefully) they will. Being able to turn them off is very helpful in case you just totally screw something up. Trust me. I know. To edit scripts, just use the <I>editscript</I> command.<BR>
+<BR>
+<U><I>if</I> structures</U><BR>
+Ah, conditional statements, how I <S>love thee.</S> <FONT COLOR=red>despise you!</FONT> Anyway, <I>if</I> structures are helpful when you only want something done <I>if</i> a certain condition is true. The basic format for an <I>if</I> statement in E-Script is as follows:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=lime><I>condition</I><BR>
+<I>various commands and stuff</I><BR>
+</FONT>endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+And there you have it. Simple enough, right? So now I guess I should give you a list of all of the conditions you can test for... Well, here goes:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=lime><U>command</U></FONT> -- <FONT COLOR=blue>is true if the player entered <U>command</U></FONT><BR>
+<FONT COLOR=red>[first]</FONT> <FONT COLOR=lime><U>letters</U></FONT> -- <FONT COLOR=blue>is true if the player's command begins with <U>letters</U></FONT><BR>
+<FONT COLOR=red>[has]</FONT> <FONT COLOR=lime><U>letters</U></FONT> -- <FONT COLOR=blue>is true if the player's command contains <U>letters</U></FONT><BR>
+<FONT COLOR=red>[open_n]</FONT>, <FONT COLOR=red>[open_s]</FONT>, <FONT COLOR=red>[open_w]</FONT>, <FONT COLOR=red>[open_e]</FONT>, <FONT COLOR=red>[open_u]</FONT>, <FONT COLOR=red>[open_d]</FONT> -- <FONT COLOR=blue>is true if players <U>can</U> move in the specified direction</FONT><BR>
+<FONT COLOR=red>[closed_n]</FONT>, <FONT COLOR=red>[closed_s]</FONT>, <FONT COLOR=red>[closed_w]</FONT>, <FONT COLOR=red>[closed_e]</FONT>, <FONT COLOR=red>[closed_u]</FONT>, <FONT COLOR=red>[closed_d]</FONT> -- <FONT COLOR=blue>is true if players <U>cannot</U> move in the specified direction</FONT><BR>
+<FONT COLOR=red>[fame]</FONT> <FONT COLOR=lime><U>number</U></FONT> -- <FONT COLOR=blue>is true if the player possesses at least <U>number</U> fame</FONT><BR>
+<FONT COLOR=red>[totalfame]</FONT> <FONT COLOR=lime><U>number</U></FONT> -- <FONT COLOR=blue>is true if the player possesses at least <U>number</U> total fame</FONT><BR>
+<FONT COLOR=red>[quests]</FONT> <FONT COLOR=lime><U>number</U></FONT> -- <FONT COLOR=blue>is true if the player has completed at least <U>number</U> quests</FONT><BR>
+<FONT COLOR=red>[pflag]</FONT> <FONT COLOR=lime><U>flag</U></FONT> -- <FONT COLOR=blue>is true if the player possesses <U>flag</U></FONT><BR>
+<FONT COLOR=red>[pflag] -</FONT><FONT COLOR=lime><U>flag</U></FONT> -- <FONT COLOR=blue>is true if the player does not possess <U>flag</U></FONT><BR>
+<FONT COLOR=red>[lflag]</FONT> <FONT COLOR=lime><U>flag</U></FONT> -- <FONT COLOR=blue>is true if the level possesses <U>flag</U></FONT><BR>
+<FONT COLOR=red>[lflag] -</FONT><FONT COLOR=lime><U>flag</U></FONT> -- <FONT COLOR=blue>is true if the level does not possess <U>flag</U></FONT><BR>
+<FONT COLOR=red>[bot]</FONT> <FONT COLOR=lime><U>name</U></FONT> -- <FONT COLOR=blue>is true if the player used the <I>talk</I> command to speak to <U>name</U></FONT><BR>
+---<BR>
+</CODE><BR>
+And I believe that's all of them, although I have a few more planned as possibilities. So, now for some examples. Let's say you wanted to do something when the player entered <I>push button</I> as their command. You would use the following <I>if</I> structure:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=lime><I>commands and stuff</I></FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Simple, right? Now, what if you wanted to do something if the player's command <I>began</I> with <I>push</I>, regardless of what the rest of command was? Do this:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=red>[first]</FONT> <FONT COLOR=blue>push</FONT><BR>
+<FONT COLOR=lime><I>blah blah blah</I></FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+And now, what if you wanted to do something any time the user's command contained "open sesame"?<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=red>[has]</FONT> <FONT COLOR=blue>open sesame</FONT><BR>
+<FONT COLOR=lime><I>commands</I></FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Finally, what if you wanted to do something only if, say, the door to the north was closed?<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=red>[closed_n]</FONT><BR>
+<FONT COLOR=lime><I>commands</I></FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Fame, quests, flags, and bots are slightly less straightforward, so I'll cover them in their own sections.<BR>
+<BR>
+<H2>Display Commands</H2><BR>
+First, we'll start with the list:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=red>print</FONT> <FONT COLOR=lime><U>message</U></FONT> -- <FONT COLOR=blue>displays <U>message</U> on the player's screen</FONT></FONT><BR>
+<FONT COLOR=red>chat</FONT> <FONT COLOR=lime><U>message</U></FONT> -- <FONT COLOR=blue>adds <U>message</U> to the player's chat</FONT><BR>
+<FONT COLOR=red>chathere</FONT> <FONT COLOR=lime><U>message</U></FONT> -- <FONT COLOR=blue>adds <U>message</U> to the chat of everyone in the current room</FONT><BR>
+<FONT COLOR=red>chatelse</FONT> <FONT COLOR=lime><U>message</U></FONT> -- <FONT COLOR=blue>adds <U>message</U> to the chat of everyone in the current room, <I>except</I> the player</FONT><BR>
+<FONT COLOR=red>chatthere</FONT> <FONT COLOR=lime><U>coordinates</U> <U>message</U></FONT> -- <FONT COLOR=blue>adds <U>message</U> to the chat of everyone at <U>coordinates</U></FONT><BR>
+<FONT COLOR=red>chatall</FONT> <FONT COLOR=lime><U>message</U></FONT> -- <FONT COLOR=blue>adds <U>message</U> to the chat of everyone on Isles of Adrasteia</FONT><BR>
+---<BR>
+</CODE><BR>
+Again, simple, right? Well <I>I</I> think it is! Anyway, examples:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=red>print</FONT> <FONT COLOR=blue>You pushed the button!</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+In the preceding example, any time the player enters the command <I>push button</I>, the text "You pushed the button!" will appear at the top of their screen.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=red>chat</FONT> <FONT COLOR=blue>You pushed the button!</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+This time, the text is added to the player's chat, and will remain there until the player clears it.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=red>chatthere</FONT> <FONT COLOR=blue>0~-1~0 Somebody just pushed the button...</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+In this example, everyone at 0~-1~0 (which happens to be the Dusk Tavern) gets the message added to their chat.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=red>print</FONT> <FONT COLOR=blue>You pushed the button!</FONT><BR>
+<FONT COLOR=red>chatelse</FONT> <FONT COLOR=blue>[name] pushed the button!</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+The player gets "You pushed the button!" displayed at the top of their screen, and everyone else in the room gets "<U>Sercc</U> Svid pushed the button!" added to their chat. Intriguing, eh? There actually three of those little "name" tags, each having different functions. Here's what they would do if I were the current player:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=red>[name]</FONT> -- <FONT COLOR=blue>displays "you" on my screen and "<U>Sercc</U> Svid" on other people's screens</FONT><BR>
+<FONT COLOR=red>[Name]</FONT> -- <FONT COLOR=blue>displays "You" on my screen and "<U>Sercc</U> Svid" on other people's screens</FONT><BR>
+<FONT COLOR=red>[NAME]</FONT> -- <FONT COLOR=blue>displays "<U>Sercc</U> Svid" on everyone's screens</FONT><BR>
+---<BR>
+</CODE><BR>
+These tags work with <I>chat</I>, <I>chatelse</I>, <I>chathere</I>, <I>chatthere</I>, and <I>chatall</I>, but not <I>print</I>. If you don't like that, get over it. I'm too lazy to add <I>print</I> functionality. Anyway, you can probably figure out how to use the other chat commands by looking at these examples, so I'll move on to the next section.<BR>
+<BR>
+<H2>Opening/Closing</H2><BR>
+There are three commands used to opening and closing movement in specific directions. They are:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=red>open</FONT> <FONT COLOR=lime><U>dir</U></FONT> -- <FONT COLOR=blue>opens movement in the <U>dir</U> direction</FONT><BR>
+<FONT COLOR=red>close</FONT> <FONT COLOR=lime><U>dir</U></FONT> -- <FONT COLOR=blue>closes movement in the <U>dir</U> direction</FONT><BR>
+<FONT COLOR=red>switch</FONT> <FONT COLOR=lime><U>dir</U></FONT> -- <FONT COLOR=blue>opens or closes movement in the <U>dir</U> direction</FONT><BR>
+---<BR>
+</CODE><BR>
+In all of these cases, <I>dir</I> is the first letter of the direction you wish to open/close (n,s,w,e,u,d).<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>open door</FONT><BR>
+<FONT COLOR=red>open</FONT> <FONT COLOR=blue>n</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+If the player enters <I>open door</I> as their command, movement to the north becomes possible.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=red>switch</FONT> <FONT COLOR=blue>n</FONT><BR>
+if <FONT COLOR=red>[open_n]<BR>
+print</FONT> <FONT COLOR=blue>The door opened.</FONT COLOR=blue><BR>
+endif<BR>
+if <FONT COLOR=red>[closed_n]<BR>
+print</FONT> <FONT COLOR=blue>The door closed.</FONT><BR>
+endif<BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Yeah, that one was kinda complicated... It basically just opens or closes the door, then checks to see what it did and tells the player. Note the nested <I>if</I> structures. Yes, you can do that. You can also add blank lines to make this easier to read:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=red>switch</FONT> <FONT COLOR=blue>n</FONT><BR>
+<BR>
+if <FONT COLOR=red>[open_n]<BR>
+print</FONT> <FONT COLOR=blue>The door opened.</FONT COLOR=blue><BR>
+endif<BR>
+
+if <FONT COLOR=red>[closed_n]<BR>
+print</FONT> <FONT COLOR=blue>The door closed.</FONT><BR>
+endif<BR>
+<BR>
+endif<BR>
+</FONT>---<BR></CODE><BR>
+A <I>little</I> easier, right? Blank lines have no effect on anything, so feel free to use as many as you want.<BR>
+<BR>
+<H2>Movement</H2>
+Commands:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=red>move</FONT> <FONT COLOR=lime><U>dir</U></FONT> -- <FONT COLOR=blue>moves the player to the room on the <U>dir</U> side of the current room</FONT><BR>
+<FONT COLOR=red>move</FONT> <FONT COLOR=lime><U>coordinates</U></FONT> -- <FONT COLOR=blue>moves player to <U>coordinates</U></FONT><BR>
+---<BR>
+</CODE><BR>
+Again, <I>dir</I> is only the first letter. So, let's move someone.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>climb ladder</FONT><BR>
+<FONT COLOR=red>move</FONT> <FONT COLOR=blue>u</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Simple enough. Someone enters the command "climb ladder", and they get moved up one room. However, the <I>move</I> command doesn't automatically do the whole "<U>Sercc</U> Svid entered from below" thing. So how do we fix that? Easy! First, let's assume (for simplicity's sake) that coordinates of the current level are 0~0~0.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>climb ladder</FONT><BR>
+<FONT COLOR=red>move <FONT COLOR=blue>u</FONT><BR>
+chatelse <FONT COLOR=blue>[Name] climbed up the ladder.</FONT><BR>
+chatthere</FONT> <FONT COLOR=blue>0~0~1 [Name] climbs up from below.</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Please note that even though the player has been whisked away to the room above the current one, the <I>chathere</I> and <I>chatelse</I> commands haven't followed him. In addition, if you actually <I>use</I> the <I>chathere</I> command, the player will still see the chat, because he's still in the level's list of characters until after the script has run all the way through. So use <I>chatelse</I> and <I>chatthere</I>. Oh, and one last example:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button<BR>
+<FONT COLOR=red>move</FONT> 0~0~Sercc</FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Push the button, get sent to my room. Piece of cake. Easy as pie. And yes, I'm hungry.<BR>
+<BR>
+<H2>Bots</H2>
+Only one new command for this one:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=red>bot</FONT> <FONT COLOR=lime><U>name</U></FONT> -- <FONT COLOR=blue>causes the player to chat with <U>name</U></FONT><BR>
+---<BR>
+</CODE><BR>
+In order to use a bot, you need to make one first, via the <I>editbot</I> command. (editbot botname) So let's say I made a bot named Fred. I also made another bot named Fred2 who is basically the same, but has a few different things he can say. He only says them if the door to the south is open, though. Example:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=red>[bot]</FONT> <FONT COLOR=blue>fred</FONT><BR>
+<BR>
+if <FONT COLOR=red>[closed_s]<BR>
+bot</FONT> <FONT COLOR=blue>Fred</FONT><BR>
+endif<BR>
+<BR>
+if <FONT COLOR=red>[open_s]<BR>
+bot</FONT> <FONT COLOR=blue>Fred2</FONT><BR>
+endif<BR>
+<BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Please note that the <I>if</I> statement determines which bot the player is talking to based on their command, not the bot's actual name. Thus, you can have a bot named basicguard and use him for guards named Henry and George, like this:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=red>[bot] <FONT COLOR=blue>henry</FONT><BR>
+bot <FONT COLOR=blue>basicguard</FONT></FONT><BR>
+endif<BR>
+if <FONT COLOR=red>[bot] <FONT COLOR=blue>george</FONT><BR>
+bot <FONT COLOR=blue>basicguard</FONT></FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Of course, the bot's name is stored in the file you create when you use the <I>editbot</I> command, so this might not be too practical. A more useful example might be:<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=red>[bot] <FONT COLOR=blue>barkeep</FONT><BR>
+bot <FONT COLOR=blue>Adurant</FONT></FONT><BR>
+endif<BR>
+if <FONT COLOR=red>[bot] <FONT COLOR=blue>adurant</FONT><BR>
+bot <FONT COLOR=blue>Adurant</FONT></FONT><BR>
+endif<BR>
+<BR>
+if <FONT COLOR=red>[bot] <FONT COLOR=blue>black</FONT><BR>
+bot <FONT COLOR=blue>blackrat</FONT></FONT><BR>
+endif<BR>
+if <FONT COLOR=red>[bot] <FONT COLOR=blue>rat</FONT><BR>
+bot <FONT COLOR=blue>blackrat</FONT></FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Understand? Great!<BR>
+<BR>
+<H2>Quests</H2>
+There are three stats connected to quests, and there's a command to manipulate each of them:<BR>
+<CODE><BR>
+---<BR>
+<FONT COLOR=red>fame</FONT> <FONT COLOR=lime><U>number</U></FONT> -- <FONT COLOR=blue>adds <U>number</U> to player's fame rating</FONT><BR>
+<FONT COLOR=red>totalfame</FONT> <FONT COLOR=lime><U>number</U></FONT> -- <FONT COLOR=blue>adds <U>number</U> to player's total fame rating</FONT><BR>
+<FONT COLOR=red>quests</FONT> <FONT COLOR=lime><U>number</U></FONT> -- <FONT COLOR=blue>adds <U>number</U> to player's number of completed quests</FONT><BR>
+---<BR>
+</CODE><BR>
+Players should earn fame and totalfame every time they complete a quest, and their number of completed quests should increase by one. The difference between fame and totalfame is that fame will be used to buy upgrades at the Adventurer's Guild, and totalfame will simply be used to remind the player how much total fame they've earned throughout their quests.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>push button</FONT><BR>
+<FONT COLOR=red>fame <FONT COLOR=blue>5</FONT><BR>
+totalfame <FONT COLOR=blue>5</FONT><BR>
+quests <FONT COLOR=blue>1</FONT><BR>
+print <FONT COLOR=blue>You've completed a quest!</FONT></FONT><BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+Easy enough. Assuming that pushing the button is the last step in a quest, this would give the player 5 fame and credit for completion of the quest.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>learn scan</FONT><BR>
+if <FONT COLOR=red>[fame] <FONT COLOR=blue>20</FONT><BR>
+fame <FONT COLOR=blue>-20</FONT><BR>
+print <FONT COLOR=blue>You've learned scan.</FONT></FONT><BR>
+endif<BR>
+endif<BR>
+</FONT>---<BR>
+</CODE><BR>
+In this one, the player enters "learn scan" as their command. The script checks to see if they have at least 20 fame points, and if they do, it subtracts 20 by simply adding -20. In theory, it would also give them scan, but you don't know how to work that kind of stuff yet, young grasshopper.<BR>
+<CODE><BR>
+---<BR><FONT COLOR=yellow>
+if <FONT COLOR=blue>receive bigmap</FONT><BR>
+if <FONT COLOR=red>[totalfame] <FONT COLOR=blue>50</FONT><BR>
+<FONT COLOR=lime><I>some command to give the player the bigmap skill</I></FONT><BR>
+print <FONT COLOR=blue>Your map has increased in size.</FONT></FONT><BR>
+endif<BR>
+endif<BR>
+</FONT>---<BR>
+In this one, if the player has earned at least 50 fame total, they get to increase the size of their auto-map. You can also check how many quests they have completed via [quests], as well as editing their number of quests.<BR>
+<H2>Flags</H2>
+Coming <S COLOR=red>soon.</S> <S COLOR=yellow><FONT COLOR=red>eventually.</FONT></S> <FONT COLOR=yellow>I hope.</FONT>
+</BODY>
+</HTML>

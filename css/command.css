@@ -1,0 +1,103 @@
+/* font-family: 'Quattrocento', serif;
+font-family: 'Quattrocento Sans', sans-serif; */
+
+body {
+	background-color: rgba(0,0,0,.87);
+}
+
+
+
+ul.quick-links, ul.quick-links-mobile{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+}
+
+ul.quick-links > li a, ul.quick-links-mobile > li a{
+	display: inline-block;
+	padding: 0.25em 1em;
+	text-decoration: none;
+	font-family: 'Quattrocento', serif;
+	font-size: 1.2rem;
+	color: rgba(255,255,255,.8);
+	transition: all ease .3s;
+}
+
+ul.quick-links > li a:hover, ul.quick-links-mobile > li a:hover{
+	color: rgba(255,255,255,1)	
+}
+
+ul.quick-links-mobile{
+	margin-left: -15px;
+}
+
+ul.quick-links-mobile > li a {
+	font-size: .7em;
+}
+
+label{
+	font-family: 'Quattrocento Sans', sans-serif;
+	color: rgba(255,255,255,.8);	
+}
+
+.form-select{
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba(255,255,255,.8)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+input[type=text], input[type=text]:focus, .form-select{	
+	background-color: #3f3c43;
+	border-color: #3f3c43; 
+	color: rgba(255,255,255,.8);
+	font-family: 'Quattrocento', serif;
+}
+
+input[type=text]:focus, .form-select:focus{
+	outline: none!important;
+	border-color: #9d436b!important;
+	box-shadow: 0 0 0 .25 rgba(157,67,107,.25)!important;
+}
+
+
+.btn-pink{
+	background-color: #9d436b;
+	color: #f4f5f4;
+	font-family: 'Quattrocento', serif;
+}
+
+.btn-pink:hover{
+	background-color: #803255;
+	color: #f4f5f4;
+}
+
+.mobile-menu{
+	background-color: #3f3c43;
+	position: fixed;
+	padding-top: 4px;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+}
+
+.mobile-menu ul{
+	margin-left: -20px;
+}
+
+@media screen and (min-width: 769px) {
+	.mobile-menu{
+		display: none;
+	}	
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 768px) {
+  .justify-content-sm-end{
+	  justify-content: end;
+  }
+  
+  .submit-bar{
+	  margin-top: 1rem;
+	  margin-bottom: .8rem;
+  }
+  
+}

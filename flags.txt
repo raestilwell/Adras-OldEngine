@@ -1,0 +1,103 @@
+---Player Flags---
+(Avian) - Avian language
+(Centaur) - centaur language
+(Draconic) - Draconic language
+(Drow) - Drow language
+(Dwarvish) - Dwarvish language
+(Elvish) - Elvish language
+(Gnomish) - Gnomish language
+(Minotaur) - Minotaur language
+(Natari) - Natari language
+(Orkish) - Orkish language
+(Troll) - Troll language
+(Undercommon) - Undercommon language
+(Common-sign) - Common sign language
+(Drow-sign) - Drow sign language
+(Carak-Gwaith) - Carak-Gwaith language
+(Divus) - Divus language
+(Hyten) - Hyten language
+(Logent) - Logent language
+
+(clair) - clairvoyance
+(gclair) - greater clairvoyance
+(mclair) - master clairvoyance
+
+(alchemy) - alchemy skill
+(archery) - archery skill
+(brawl) - brawling skill
+(climb) - climb skill
+(cook) - cook skill
+(dark) - dark sight skill
+(dig) - dig skill
+(disarm) - disarm skill
+(hide) - cloak skill
+(feather) - feather fall skill
+(fish) - fish skill
+(fly) - fly skill
+(forage) - forage skill
+(forge) - forge skill
+(heal) - healing skill
+(heft) - heft skill
+(hide) - cloak skill
+(hunt) - hunt skill
+(hypno) - hypnotize skill
+(infravision) - infravision skill
+(interpret) - interpret skill
+(items) - item lore skill
+(levitate) - levitate skill
+(lockpick) - lockpicking skill
+(magic) - magic skill
+(martial) - martial arts skill
+(might) - might skill
+(mshield) - mind shield skill
+(music) - music skill
+(navigate) - navigation skill
+(perc) - perception skill
+(poison) - poison skill
+(read) - reading skill
+(recall) - Recall skill
+(resurrect) - resurrect skill
+(seaman) - seamanship skill
+(speed) - speed skill
+(stealth) - stealth skill
+(swim) - swim skill
+(sword) - swordsmanship skill
+(tp) - telepathy skill
+(tk) - telekinesis skill
+
+(evision) - eaglevision skill
+(fwalk) - firewalk skill
+(morph) - morph skill
+(phase) - phase skill
+(ntalk) - nature talk skill
+(wbreathe) - waterbreathe skill
+(aura) - aura skill
+(diffuse) - diffuse skill
+
+
+(cloak) - is cloaked
+(invis) - is invisible
+
+(ooc) - do not see OOC channel
+(chat) - do not see chat channel
+(map) - do not see map
+(bold) - all-bold on
+
+(getlieleth) - quest
+(gotlieleth) - quest
+(gavelieleth) - quest
+(getpedwin) - quest
+(gotpedwin) - quest
+(gavepedwin) - quest
+(getRuric) - quest
+(gotRuric) - quest
+(gaveRuric) - quest
+
+(kemisle) - has traveled to Kemay
+(azreth) - has traveled to Nedezda
+(gobcamp) - has traveled to the goblin camp
+(osk) - has traveled to Mount Osk
+
+
+---Level Flags---
+(script) - scripts are on

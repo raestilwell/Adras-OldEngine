@@ -1,0 +1,78 @@
+.wrap {
+width: 960px;
+margin-left: auto;
+margin-right: auto;
+padding: 5px;
+}
+
+.first{
+width: 100%;
+float: left;
+padding: 5px;
+}
+
+.name {
+float: left;
+margin-right: 35px;
+}
+
+.org {
+float: left;
+margin-top: 35px;
+}
+
+.second {
+width: 100%;
+float: left;
+padding: 5px;
+margin-top: -15px;
+}
+
+.stats {
+float: left;
+}
+
+.recall {
+clear: both;
+}
+
+.main {
+width: 100%;
+float: left;
+padding: 5px;
+}
+
+.flags {
+width: 57%;
+float: left;
+}
+
+.info {
+width: 35%;
+float: right;
+margin-left: 3%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+	margin-right: 25px;
+	float: left;
+	
+}
+
+h3 {
+	padding: 0;
+	margin: 0;
+	}
+
+hr {
+	padding: 0;
+	margin: 0;
+}
+

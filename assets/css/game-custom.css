@@ -1,0 +1,92 @@
+/**
+ * Modified game.css with variable colors
+ * Save this as game-custom.css and replace the reference in main.php
+ */
+
+:root {
+	--bg-color: /*BG_COLOR*/;
+	--text-color: /*TEXT_COLOR*/;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Cinzel Decorative', serif;
+	color: var(--text-color);
+}
+
+ul.utility-links {
+	list-style-type: none;
+	background-color: var(--bg-color);
+}
+
+ul.utility-links > li {
+	display: inline-block;
+	margin: .25em .34em;
+	background-color: var(--bg-color);
+}
+
+ul.utility-links > li > a {
+	color: var(--text-color);
+	transition: all ease .2s;
+}
+
+ul.utility-links > li > a:hover {
+	color: var(--text-color);
+}
+
+.top-right {
+	position: absolute;
+	z-index: 2000;
+	top: 20;
+	right: 20;
+	background-color: var(--bg-color);
+}
+
+#overDiv {
+	position: absolute;
+	visibility: hidden;
+	z-index: 1000;
+	background-color: var(--bg-color);
+}
+
+.window-alert {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	border-radius: 4px;
+	text-align: center;
+	position: fixed;
+	top: 25%;
+	right: 0;
+}
+
+.window-alert a {
+	font-family: 'Quattrocento', serif;
+	text-decoration: none !important;
+	color: var(--text-color) !important;
+}
+
+table.window-alert th,
+table.window-alert td {
+	padding: 1rem !important;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+.n-alert {
+	animation: tilt-shaking;
+	animation-duration: .2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes tilt-shaking {
+	0% { transform: rotate(0deg); }
+	25% { transform: rotate(5deg); }
+	50% { transform: rotate(0eg); }
+	75% { transform: rotate(-5deg); }
+	100% { transform: rotate(0deg); }
+}
+
+/* Add additional overrides to ensure consistent styling */
+body, html, main, div, p, span, table, tr, td, th {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
